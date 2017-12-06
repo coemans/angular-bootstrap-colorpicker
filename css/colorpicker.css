@@ -75,7 +75,7 @@ colorpicker-alpha,
   position: relative;
 }
 .colorpicker input {
-  width: 100px;
+  width: 100%;
   font-size: 11px;
   color: #000;
   background-color: #fff;
