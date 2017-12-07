@@ -268,10 +268,10 @@ angular.module('colorpicker.module', [])
           var
               thisFormat = attrs.colorpicker ? attrs.colorpicker : 'hex',
               position = angular.isDefined(attrs.colorpickerPosition) ? attrs.colorpickerPosition : 'bottom',
-              inline = angular.isDefined(attrs.colorpickerInline) ? attrs.colorpickerInline : false,
-              fixedPosition = angular.isDefined(attrs.colorpickerFixedPosition) ? attrs.colorpickerFixedPosition : false,
+              inline = angular.isDefined(attrs.colorpickerInline) ? JSON.parse(attrs.colorpickerInline) : false,
+              fixedPosition = angular.isDefined(attrs.colorpickerFixedPosition) ? JSON.parse(attrs.colorpickerFixedPosition) : false,
               target = angular.isDefined(attrs.colorpickerParent) ? elem.parent() : angular.element(document.body),
-              withInput = angular.isDefined(attrs.colorpickerWithInput) ? attrs.colorpickerWithInput : false,
+              withInput = angular.isDefined(attrs.colorpickerWithInput) ? JSON.parse(attrs.colorpickerWithInput) : false,
               componentSize = angular.isDefined(attrs.colorpickerSize) ? attrs.colorpickerSize : 100,
               componentSizePx = componentSize + 'px',
               inputTemplate = withInput ? '<input type="text" name="colorpicker-input" spellcheck="false">' : '',

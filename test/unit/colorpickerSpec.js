@@ -100,6 +100,14 @@ describe('colorpicker module', function () {
       elm.trigger('keyup');
       expect($colorPickerInput.val()).toBe('#333');
     });
+    
+    it('should not show the optional input field, when colorpicker-with-input="false"', function() {
+    	var elem = compileElement('<input colorpicker colorpicker-with-input="false" ng-model="picker.color" type="text" />', $scope);
+    	elem.click();
+    	var $colorPicker = $('.colorpicker:last');
+    	var $colorPickerInput = $colorPicker.find('input');
+    	expect($colorPickerInput.size()).toBe(0);
+    });
   });
 
   describe('Color', function () {
